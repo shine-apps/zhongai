@@ -1,0 +1,28 @@
+{
+  "name": "zhongai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "众爱联盟 - Monorepo 项目",
+  "workspaces": [
+    "server",
+    "app"
+  ],
+  "scripts": {
+    "dev": "nuxi dev server",
+    "build": "nuxi build server",
+    "generate": "nuxi generate server",
+    "preview": "nuxi preview server",
+    "postinstall": "nuxi prepare server",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "dev:app": "npm run dev:h5 -w app",
+    "dev:app:mp": "npm run dev:mp-weixin -w app",
+    "build:app:h5": "npm run build:h5 -w app",
+    "build:app:mp": "npm run build:mp-weixin -w app"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

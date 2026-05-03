@@ -1,0 +1,70 @@
+{
+  "pages": [
+    { "path": "pages/index/index", "style": { "navigationBarTitleText": "众爱联盟" } },
+    { "path": "pages/activity/list", "style": { "navigationBarTitleText": "活动大厅" } },
+    { "path": "pages/activity/detail", "style": { "navigationBarTitleText": "活动详情" } },
+    { "path": "pages/activity/register", "style": { "navigationBarTitleText": "活动报名" } },
+    { "path": "pages/activity/checkin", "style": { "navigationBarTitleText": "签到打卡" } },
+    { "path": "pages/donation/submit", "style": { "navigationBarTitleText": "捐助登记" } },
+    { "path": "pages/donation/records", "style": { "navigationBarTitleText": "捐助记录" } },
+    { "path": "pages/points/index", "style": { "navigationBarTitleText": "我的积分" } },
+    { "path": "pages/points/activity-detail", "style": { "navigationBarTitleText": "活动积分明细" } },
+    { "path": "pages/points/donation-detail", "style": { "navigationBarTitleText": "捐助积分明细" } },
+    { "path": "pages/market/list", "style": { "navigationBarTitleText": "爱心集市" } },
+    { "path": "pages/market/detail", "style": { "navigationBarTitleText": "帖子详情" } },
+    { "path": "pages/market/publish", "style": { "navigationBarTitleText": "发布信息" } },
+    { "path": "pages/mall/list", "style": { "navigationBarTitleText": "积分商城" } },
+    { "path": "pages/mall/detail", "style": { "navigationBarTitleText": "商品详情" } },
+    { "path": "pages/mall/orders", "style": { "navigationBarTitleText": "我的订单" } },
+    { "path": "pages/ranking/index", "style": { "navigationBarTitleText": "排行榜" } },
+    { "path": "pages/profile/index", "style": { "navigationBarTitleText": "个人中心" } },
+    { "path": "pages/profile/edit", "style": { "navigationBarTitleText": "编辑资料" } },
+    { "path": "pages/profile/realname", "style": { "navigationBarTitleText": "实名认证" } },
+    { "path": "pages/profile/feedback", "style": { "navigationBarTitleText": "意见反馈" } },
+    { "path": "pages/login/index", "style": { "navigationBarTitleText": "登录" } }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "众爱联盟",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f5f5f5"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#07c160",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tab/home.png",
+        "selectedIconPath": "static/tab/home-active.png"
+      },
+      {
+        "pagePath": "pages/activity/list",
+        "text": "活动",
+        "iconPath": "static/tab/activity.png",
+        "selectedIconPath": "static/tab/activity-active.png"
+      },
+      {
+        "pagePath": "pages/points/index",
+        "text": "积分",
+        "iconPath": "static/tab/points.png",
+        "selectedIconPath": "static/tab/points-active.png"
+      },
+      {
+        "pagePath": "pages/market/list",
+        "text": "集市",
+        "iconPath": "static/tab/market.png",
+        "selectedIconPath": "static/tab/market-active.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "static/tab/profile.png",
+        "selectedIconPath": "static/tab/profile-active.png"
+      }
+    ]
+  }
+}
