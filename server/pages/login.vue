@@ -112,7 +112,7 @@ async function handleLogin() {
           <UButton
             type="submit"
             color="primary"
-            block
+            class="w-full"
             :loading="loading"
           >
             登录

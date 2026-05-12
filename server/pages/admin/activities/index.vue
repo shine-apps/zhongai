@@ -215,14 +215,14 @@ async function deleteActivity(activity: any) {
 
 // ---- 表格列定义 ----
 const columns = [
-  { key: 'title', id: 'title', label: '标题' },
-  { key: 'category', id: 'category', label: '分类', class: 'w-[100px]' },
-  { key: 'time', id: 'time', label: '时间', class: 'w-[180px]' },
-  { key: 'location', id: 'location', label: '地点', class: 'w-[140px]' },
-  { key: 'participants', id: 'participants', label: '人数', class: 'w-[100px]' },
-  { key: 'rewardPoints', id: 'rewardPoints', label: '积分', class: 'w-[80px]' },
-  { key: 'status', id: 'status', label: '状态', class: 'w-[100px]' },
-  { key: 'actions', id: 'actions', label: '操作', class: 'w-[240px]' },
+  { key: 'title', label: '标题' },
+  { key: 'category', label: '分类', class: 'w-[100px]' },
+  { key: 'time', label: '时间', class: 'w-[180px]' },
+  { key: 'location', label: '地点', class: 'w-[140px]' },
+  { key: 'participants', label: '人数', class: 'w-[100px]' },
+  { key: 'rewardPoints', label: '积分', class: 'w-[80px]' },
+  { key: 'status', label: '状态', class: 'w-[100px]' },
+  { key: 'actions', label: '操作', class: 'w-[240px]' },
 ]
 
 onMounted(() => {
@@ -255,7 +255,7 @@ onMounted(() => {
         />
         <USelect
           v-model="categoryFilter"
-          :options="categoryOptions"
+          :items="categoryOptions"
           placeholder="分类筛选"
           clearable
           class="w-[140px]"
@@ -263,7 +263,7 @@ onMounted(() => {
         />
         <USelect
           v-model="statusFilter"
-          :options="statusOptions"
+          :items="statusOptions"
           placeholder="状态筛选"
           clearable
           class="w-[140px]"
@@ -366,7 +366,7 @@ onMounted(() => {
     <UModal v-model:open="showFormModal" :title="isEditing ? '编辑活动' : '创建活动'">
       <div class="space-y-4 p-4">
         <UInput v-model="formData.title" label="活动标题" placeholder="请输入活动标题" />
-        <USelect v-model="formData.category" :options="categoryOptions" label="活动分类" />
+        <USelect v-model="formData.category" :items="categoryOptions" label="活动分类" />
         <UTextarea v-model="formData.description" label="活动描述" placeholder="请输入活动描述" :rows="4" />
         <div class="grid grid-cols-2 gap-4">
           <UInput v-model="formData.startTime" label="开始时间" type="datetime-local" />

@@ -133,13 +133,13 @@ async function submitReview() {
 
 // ---- 表格列定义 ----
 const columns = [
-  { key: 'user', id: 'user', label: '捐助人', class: 'w-[150px]' },
-  { key: 'donationType', id: 'donationType', label: '类型', class: 'w-[80px]' },
-  { key: 'amount', id: 'amount', label: '金额/物资', class: 'w-[140px]' },
-  { key: 'evidence', id: 'evidence', label: '凭证', class: 'w-[100px]' },
-  { key: 'status', id: 'status', label: '状态', class: 'w-[100px]' },
-  { key: 'createdAt', id: 'createdAt', label: '提交时间', class: 'w-[160px]' },
-  { key: 'actions', id: 'actions', label: '操作', class: 'w-[200px]' },
+  { key: 'user', label: '捐助人', class: 'w-[150px]' },
+  { key: 'donationType', label: '类型', class: 'w-[80px]' },
+  { key: 'amount', label: '金额/物资', class: 'w-[140px]' },
+  { key: 'evidence', label: '凭证', class: 'w-[100px]' },
+  { key: 'status', label: '状态', class: 'w-[100px]' },
+  { key: 'createdAt', label: '提交时间', class: 'w-[160px]' },
+  { key: 'actions', label: '操作', class: 'w-[200px]' },
 ]
 
 onMounted(() => {
@@ -160,7 +160,7 @@ onMounted(() => {
       <div class="flex flex-wrap items-center gap-4">
         <USelect
           v-model="statusFilter"
-          :options="statusOptions"
+          :items="statusOptions"
           placeholder="状态筛选"
           clearable
           class="w-[150px]"
@@ -168,7 +168,7 @@ onMounted(() => {
         />
         <USelect
           v-model="typeFilter"
-          :options="typeOptions"
+          :items="typeOptions"
           placeholder="类型筛选"
           clearable
           class="w-[150px]"

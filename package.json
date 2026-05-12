@@ -8,11 +8,11 @@
     "app"
   ],
   "scripts": {
-    "dev": "nuxi dev server",
-    "build": "nuxi build server",
-    "generate": "nuxi generate server",
-    "preview": "nuxi preview server",
-    "postinstall": "nuxi prepare server",
+    "dev": "cd server && ./node_modules/.bin/nuxi dev",
+    "build": "cd server && ./node_modules/.bin/nuxi build",
+    "generate": "cd server && ./node_modules/.bin/nuxi generate",
+    "preview": "cd server && ./node_modules/.bin/nuxi preview",
+    "postinstall": "cd server && ./node_modules/.bin/nuxi prepare",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",

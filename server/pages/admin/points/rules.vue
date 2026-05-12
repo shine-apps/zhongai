@@ -189,7 +189,7 @@ onMounted(() => {
             <!-- 积分类型 -->
             <div>
               <div class="text-xs text-gray-400">积分类型</div>
-              <UBadge :label="pointTypeLabel(rule.pointType)" variant="subtle" color="primary" size="sm" />
+              <UBadge variant="subtle" color="primary" size="sm">{{ pointTypeLabel(rule.pointType) }}</UBadge>
             </div>
 
             <!-- 每单位积分数 -->
@@ -243,13 +243,13 @@ onMounted(() => {
       <div class="space-y-4 p-4">
         <USelect
           v-model="formData.ruleType"
-          :options="ruleTypeOptions"
+          :items="ruleTypeOptions"
           label="规则类型"
           placeholder="请选择规则类型"
         />
         <USelect
           v-model="formData.pointType"
-          :options="pointTypeOptions"
+          :items="pointTypeOptions"
           label="积分类型"
           placeholder="请选择积分类型"
         />

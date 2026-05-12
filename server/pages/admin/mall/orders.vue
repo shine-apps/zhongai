@@ -211,16 +211,16 @@ async function saveRemark() {
 
 // ---- 表格列定义 ----
 const columns = [
-  { key: 'orderNo', id: 'orderNo', label: '订单编号', class: 'w-[160px]' },
-  { key: 'user', id: 'user', label: '用户', class: 'w-[160px]' },
-  { key: 'itemCount', id: 'itemCount', label: '商品数量', class: 'w-[90px]' },
-  { key: 'activityPointsCost', id: 'activityPointsCost', label: '活动积分', class: 'w-[100px]' },
-  { key: 'donationPointsCost', id: 'donationPointsCost', label: '捐助积分', class: 'w-[100px]' },
-  { key: 'status', id: 'status', label: '状态', class: 'w-[100px]' },
-  { key: 'recipientName', id: 'recipientName', label: '收货人', class: 'w-[100px]' },
-  { key: 'address', id: 'address', label: '收货地址', class: 'w-[180px]' },
-  { key: 'createdAt', id: 'createdAt', label: '创建时间', class: 'w-[160px]' },
-  { key: 'actions', id: 'actions', label: '操作', class: 'w-[160px]' },
+  { key: 'orderNo', label: '订单编号', class: 'w-[160px]' },
+  { key: 'user', label: '用户', class: 'w-[160px]' },
+  { key: 'itemCount', label: '商品数量', class: 'w-[90px]' },
+  { key: 'activityPointsCost', label: '活动积分', class: 'w-[100px]' },
+  { key: 'donationPointsCost', label: '捐助积分', class: 'w-[100px]' },
+  { key: 'status', label: '状态', class: 'w-[100px]' },
+  { key: 'recipientName', label: '收货人', class: 'w-[100px]' },
+  { key: 'address', label: '收货地址', class: 'w-[180px]' },
+  { key: 'createdAt', label: '创建时间', class: 'w-[160px]' },
+  { key: 'actions', label: '操作', class: 'w-[160px]' },
 ]
 
 onMounted(() => {
@@ -241,7 +241,7 @@ onMounted(() => {
       <div class="flex flex-wrap items-center gap-4">
         <USelect
           v-model="statusFilter"
-          :options="statusOptions"
+          :items="statusOptions"
           placeholder="状态筛选"
           clearable
           class="w-[150px]"

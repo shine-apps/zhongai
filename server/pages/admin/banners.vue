@@ -190,14 +190,14 @@ async function toggleActive(banner: any) {
 
 // ---- 表格列定义 ----
 const columns = [
-  { key: 'imageUrl', id: 'imageUrl', label: '缩略图', class: 'w-[100px]' },
-  { key: 'title', id: 'title', label: '标题' },
-  { key: 'linkType', id: 'linkType', label: '跳转类型', class: 'w-[100px]' },
-  { key: 'linkValue', id: 'linkValue', label: '跳转值', class: 'w-[180px]' },
-  { key: 'sortOrder', id: 'sortOrder', label: '排序', class: 'w-[80px]' },
-  { key: 'isActive', id: 'isActive', label: '状态', class: 'w-[100px]' },
-  { key: 'validity', id: 'validity', label: '有效期', class: 'w-[200px]' },
-  { key: 'actions', id: 'actions', label: '操作', class: 'w-[140px]' },
+  { key: 'imageUrl', label: '缩略图', class: 'w-[100px]' },
+  { key: 'title', label: '标题' },
+  { key: 'linkType', label: '跳转类型', class: 'w-[100px]' },
+  { key: 'linkValue', label: '跳转值', class: 'w-[180px]' },
+  { key: 'sortOrder', label: '排序', class: 'w-[80px]' },
+  { key: 'isActive', label: '状态', class: 'w-[100px]' },
+  { key: 'validity', label: '有效期', class: 'w-[200px]' },
+  { key: 'actions', label: '操作', class: 'w-[140px]' },
 ]
 
 onMounted(() => {
@@ -296,7 +296,7 @@ onMounted(() => {
       <div class="space-y-4 p-4">
         <UInput v-model="formData.title" label="标题" placeholder="请输入轮播图标题" />
         <UInput v-model="formData.imageUrl" label="图片 URL" placeholder="请输入图片地址" />
-        <USelect v-model="formData.linkType" :options="linkTypeOptions" label="跳转类型" />
+        <USelect v-model="formData.linkType" :items="linkTypeOptions" label="跳转类型" />
         <UInput
           v-model="formData.linkValue"
           :placeholder="linkValuePlaceholder"

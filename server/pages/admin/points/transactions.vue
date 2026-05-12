@@ -102,14 +102,14 @@ function handlePageChange(page: number) {
 
 // ---- 表格列定义 ----
 const columns = [
-  { key: 'user', id: 'user', label: '用户', class: 'w-[150px]' },
-  { key: 'pointType', id: 'pointType', label: '积分类型', class: 'w-[100px]' },
-  { key: 'changeType', id: 'changeType', label: '变动类型', class: 'w-[90px]' },
-  { key: 'amount', id: 'amount', label: '数量', class: 'w-[80px]' },
-  { key: 'balanceAfter', id: 'balanceAfter', label: '变动后余额', class: 'w-[100px]' },
-  { key: 'sourceType', id: 'sourceType', label: '来源', class: 'w-[100px]' },
-  { key: 'description', id: 'description', label: '描述' },
-  { key: 'createdAt', id: 'createdAt', label: '时间', class: 'w-[160px]' },
+  { key: 'user', label: '用户', class: 'w-[150px]' },
+  { key: 'pointType', label: '积分类型', class: 'w-[100px]' },
+  { key: 'changeType', label: '变动类型', class: 'w-[90px]' },
+  { key: 'amount', label: '数量', class: 'w-[80px]' },
+  { key: 'balanceAfter', label: '变动后余额', class: 'w-[100px]' },
+  { key: 'sourceType', label: '来源', class: 'w-[100px]' },
+  { key: 'description', label: '描述' },
+  { key: 'createdAt', label: '时间', class: 'w-[160px]' },
 ]
 
 onMounted(() => {
@@ -137,7 +137,7 @@ onMounted(() => {
         />
         <USelect
           v-model="pointTypeFilter"
-          :options="pointTypeOptions"
+          :items="pointTypeOptions"
           placeholder="积分类型"
           clearable
           class="w-[140px]"
@@ -145,7 +145,7 @@ onMounted(() => {
         />
         <USelect
           v-model="changeTypeFilter"
-          :options="changeTypeOptions"
+          :items="changeTypeOptions"
           placeholder="变动类型"
           clearable
           class="w-[120px]"

@@ -155,13 +155,13 @@ async function submitReject() {
 
 // ---- 表格列定义 ----
 const columns = [
-  { key: 'title', id: 'title', label: '标题' },
-  { key: 'postType', id: 'postType', label: '类型', class: 'w-[100px]' },
-  { key: 'user', id: 'user', label: '发布人', class: 'w-[160px]' },
-  { key: 'pointsCost', id: 'pointsCost', label: '积分消耗', class: 'w-[120px]' },
-  { key: 'status', id: 'status', label: '状态', class: 'w-[100px]' },
-  { key: 'createdAt', id: 'createdAt', label: '发布时间', class: 'w-[160px]' },
-  { key: 'actions', id: 'actions', label: '操作', class: 'w-[200px]' },
+  { key: 'title', label: '标题' },
+  { key: 'postType', label: '类型', class: 'w-[100px]' },
+  { key: 'user', label: '发布人', class: 'w-[160px]' },
+  { key: 'pointsCost', label: '积分消耗', class: 'w-[120px]' },
+  { key: 'status', label: '状态', class: 'w-[100px]' },
+  { key: 'createdAt', label: '发布时间', class: 'w-[160px]' },
+  { key: 'actions', label: '操作', class: 'w-[200px]' },
 ]
 
 onMounted(() => {
@@ -182,7 +182,7 @@ onMounted(() => {
       <div class="flex flex-wrap items-center gap-4">
         <USelect
           v-model="statusFilter"
-          :options="statusOptions"
+          :items="statusOptions"
           placeholder="状态筛选"
           clearable
           class="w-[150px]"
@@ -190,7 +190,7 @@ onMounted(() => {
         />
         <USelect
           v-model="postTypeFilter"
-          :options="postTypeOptions"
+          :items="postTypeOptions"
           placeholder="帖子类型筛选"
           clearable
           class="w-[150px]"

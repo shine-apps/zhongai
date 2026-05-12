@@ -4,7 +4,6 @@
     "strict": true,
     "types": [
       "@types/node",
-      "@nuxt/devtools",
       "@nuxt/image"
     ],
     "paths": {

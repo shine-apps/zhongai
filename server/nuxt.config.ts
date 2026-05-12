@@ -1,14 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  future: {
-    compatibilityVersion: 4,
-  },
-
   modules: [
     '@nuxt/ui',
   ],
 
   compatibilityDate: '2026-05-01',
+
+  dir: {
+    app: '.',
+  },
 
   devtools: {
     enabled: true,
@@ -55,7 +55,6 @@ export default defineNuxtConfig({
   ui: {
     colors: {
       primary: 'emerald',
-      neutral: 'stone',
     },
   },
 

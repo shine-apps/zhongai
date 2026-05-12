@@ -293,11 +293,11 @@ onMounted(() => {
         <UTable
           :rows="registrations"
           :columns="[
-            { key: 'user', id: 'user', label: '用户' },
-            { key: 'status', id: 'status', label: '状态', class: 'w-[100px]' },
-            { key: 'remark', id: 'remark', label: '备注' },
-            { key: 'createdAt', id: 'createdAt', label: '报名时间', class: 'w-[160px]' },
-            { key: 'actions', id: 'actions', label: '操作', class: 'w-[160px]' },
+            { key: 'user', label: '用户' },
+            { key: 'status', label: '状态', class: 'w-[100px]' },
+            { key: 'remark', label: '备注' },
+            { key: 'createdAt', label: '报名时间', class: 'w-[160px]' },
+            { key: 'actions', label: '操作', class: 'w-[160px]' },
           ]"
           :loading="regLoading"
           :empty-state="{ icon: 'i-heroicons-user-group', label: '暂无报名数据' }"
@@ -340,11 +340,11 @@ onMounted(() => {
         <UTable
           :rows="checkins"
           :columns="[
-            { key: 'user', id: 'user', label: '用户' },
-            { key: 'checkinType', id: 'checkinType', label: '签到方式', class: 'w-[100px]' },
-            { key: 'checkinTime', id: 'checkinTime', label: '签到时间', class: 'w-[160px]' },
-            { key: 'verified', id: 'verified', label: '已确认', class: 'w-[100px]' },
-            { key: 'actions', id: 'actions', label: '操作', class: 'w-[120px]' },
+            { key: 'user', label: '用户' },
+            { key: 'checkinType', label: '签到方式', class: 'w-[100px]' },
+            { key: 'checkinTime', label: '签到时间', class: 'w-[160px]' },
+            { key: 'verified', label: '已确认', class: 'w-[100px]' },
+            { key: 'actions', label: '操作', class: 'w-[120px]' },
           ]"
           :loading="checkinLoading"
           :empty-state="{ icon: 'i-heroicons-clipboard-document-check', label: '暂无签到数据' }"

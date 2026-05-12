@@ -273,16 +273,16 @@ async function toggleRecommended(product: any) {
 
 // ---- 表格列定义 ----
 const columns = [
-  { key: 'coverImage', id: 'coverImage', label: '封面', class: 'w-[80px]' },
-  { key: 'name', id: 'name', label: '商品名称' },
-  { key: 'type', id: 'type', label: '类型', class: 'w-[100px]' },
-  { key: 'activityPointsPrice', id: 'activityPointsPrice', label: '活动积分', class: 'w-[100px]' },
-  { key: 'donationPointsPrice', id: 'donationPointsPrice', label: '捐助积分', class: 'w-[100px]' },
-  { key: 'stock', id: 'stock', label: '库存', class: 'w-[120px]' },
-  { key: 'isRecommended', id: 'isRecommended', label: '推荐', class: 'w-[100px]' },
-  { key: 'status', id: 'status', label: '状态', class: 'w-[90px]' },
-  { key: 'sortWeight', id: 'sortWeight', label: '排序', class: 'w-[80px]' },
-  { key: 'actions', id: 'actions', label: '操作', class: 'w-[160px]' },
+  { key: 'coverImage', label: '封面', class: 'w-[80px]' },
+  { key: 'name', label: '商品名称' },
+  { key: 'type', label: '类型', class: 'w-[100px]' },
+  { key: 'activityPointsPrice', label: '活动积分', class: 'w-[100px]' },
+  { key: 'donationPointsPrice', label: '捐助积分', class: 'w-[100px]' },
+  { key: 'stock', label: '库存', class: 'w-[120px]' },
+  { key: 'isRecommended', label: '推荐', class: 'w-[100px]' },
+  { key: 'status', label: '状态', class: 'w-[90px]' },
+  { key: 'sortWeight', label: '排序', class: 'w-[80px]' },
+  { key: 'actions', label: '操作', class: 'w-[160px]' },
 ]
 
 onMounted(() => {
@@ -313,7 +313,7 @@ onMounted(() => {
         />
         <USelect
           v-model="typeFilter"
-          :options="typeOptions"
+          :items="typeOptions"
           placeholder="类型筛选"
           clearable
           class="w-[150px]"
@@ -479,7 +479,7 @@ onMounted(() => {
         <!-- 商品类型 -->
         <USelect
           v-model="formData.type"
-          :options="typeOptions"
+          :items="typeOptions"
           label="商品类型"
           placeholder="选择商品类型"
         />

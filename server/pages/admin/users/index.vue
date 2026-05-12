@@ -172,43 +172,43 @@ async function confirmSetRole() {
 const columns = [
   {
     key: 'nickname',
-    id: 'nickname',
+   
     label: '用户',
     class: 'w-[200px]',
   },
   {
     key: 'memberNo',
-    id: 'memberNo',
+   
     label: '会员编号',
     class: 'w-[120px]',
   },
   {
     key: 'phone',
-    id: 'phone',
+   
     label: '手机号',
     class: 'w-[140px]',
   },
   {
     key: 'role',
-    id: 'role',
+   
     label: '角色',
     class: 'w-[100px]',
   },
   {
     key: 'status',
-    id: 'status',
+   
     label: '状态',
     class: 'w-[100px]',
   },
   {
     key: 'realNameVerified',
-    id: 'realNameVerified',
+   
     label: '实名认证',
     class: 'w-[100px]',
   },
   {
     key: 'actions',
-    id: 'actions',
+   
     label: '操作',
     class: 'w-[220px]',
   },
@@ -239,7 +239,7 @@ onMounted(() => {
         />
         <USelect
           v-model="roleFilter"
-          :options="roleOptions"
+          :items="roleOptions"
           placeholder="角色筛选"
           clearable
           class="w-[150px]"
@@ -247,7 +247,7 @@ onMounted(() => {
         />
         <USelect
           v-model="statusFilter"
-          :options="statusOptions"
+          :items="statusOptions"
           placeholder="状态筛选"
           clearable
           class="w-[150px]"
@@ -402,7 +402,7 @@ onMounted(() => {
         </p>
         <USelect
           v-model="newRole"
-          :options="roleOptions"
+          :items="roleOptions"
           placeholder="选择角色"
         />
         <div class="flex justify-end gap-3">
