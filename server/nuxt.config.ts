@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-05-01',
 
   dir: {
-    app: '.',
+    app: 'app',
   },
 
   devtools: {
