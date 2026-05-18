@@ -24,5 +24,15 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@embedded-postgres/linux-x64",
+      "esbuild",
+      "sharp"
+    ]
+  },
+  "devDependencies": {
+    "embedded-postgres": "18.3.0-beta.17"
   }
 }

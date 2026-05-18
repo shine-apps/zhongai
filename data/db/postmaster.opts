@@ -1,0 +1,1 @@
+/workspace/node_modules/.pnpm/@embedded-postgres+linux-x64@18.3.0-beta.17/node_modules/@embedded-postgres/linux-x64/native/bin/postgres "-D" "/workspace/data/db" "-p" "5432"
